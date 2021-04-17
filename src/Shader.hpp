@@ -159,7 +159,7 @@ public:
         { if(useShader) use(); glUniform4f(glGetUniformLocation(ID, name), x, y, z, w); }
     
     void setVector4f(const char* name, const glm::vec4& value, bool useShader = false)
-        { if(useShader) use(); glUniform4f(glGetUniformLocation(ID, name), value.x, value.y, value.w, value.z); }
+        { if(useShader) use(); glUniform4f(glGetUniformLocation(ID, name), value.x, value.y, value.z, value.w); }
     
     void setMatrix4(const char* name, glm::mat4 matrix, bool useShader = false)
         { if(useShader) use(); glUniformMatrix4fv(glGetUniformLocation(ID, name), 1, false, glm::value_ptr(matrix)); }

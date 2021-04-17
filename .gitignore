@@ -2,3 +2,4 @@ bin/**
 **.bat
 build/**
 .vscode/**
+imgui.ini

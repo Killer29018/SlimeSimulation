@@ -22,11 +22,12 @@ if (WIN32)
     include_directories("libraries/GLAD/include")
     include_directories("libraries/SDL/include")
     include_directories("src/Vendor")
+    include_directories("src/Vendor/Imgui")
 
     link_directories("libraries/SDL/lib")
 endif()
 
-file (GLOB cppFiles CONFIGURE_DEPENDS "${source_dir}/*.cpp")
+file (GLOB cppFiles CONFIGURE_DEPENDS "${source_dir}/*.cpp" "${source_dir}/vendor/Imgui/*.cpp")
 file (GLOB cFiles CONFIGURE_DEPENDS "${source_dir}/vendor/GLAD/*.c")
 
 add_executable(${PROJECT_NAME} ${cppFiles} ${cFiles})
